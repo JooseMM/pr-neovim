@@ -14,6 +14,13 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+local cmp = require('cmp')
+cmp.setup({
+	mapping = {
+		['<C-y>'] = cmp.mapping.confirm({select = true}),
+	}
+})
 end
 
 return Main
